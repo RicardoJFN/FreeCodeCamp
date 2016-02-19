@@ -21,3 +21,27 @@
 .Intro {
 	font-family: "Comic Sans MS"; 
 }
+
+#dog {
+	height: 250px;
+	width: 200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #021a40;
+	padding: 1px;
+}
+
+#cat {
+	height: 250px;
+	width: 350px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #021a40;
+	padding: 1px;
+}
+
+#footer{
+	text-align: center;
+}
