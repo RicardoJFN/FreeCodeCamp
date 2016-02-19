@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Adventure 2</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    var user = prompt("You're in the middle of a quest and you spot a dragon. What do you do? Do you fight, run or wait for backup?").toLowerCase();
+    var dragonHP = 95;
+    var youHit = Math.floor(Math.random() * 50);
+    var damageToDragon = 0;
+    
+    switch (user){
+        case 'fight':
+            document.write("You decided to fight the dragon, prepare yourself!" + "<br>");
+            document.write("You attacked the dragon with " + youHit + "<br>");
+            //damageToDragon = damageToDragon + youHit;
+            
+            for (var i = 0; i <= dragonHP; i++){
+                youHit = Math.floor(Math.random() * 50);
+                damageToDragon = damageToDragon + youHit;
+                if (damageToDragon <= dragonHP){
+                    dragonHP = dragonHP - damageToDragon;
+                    document.write("Damage done " + damageToDragon + "Dragon hp " + dragonHP + "<br>");
+                    document.write("Damage you did " + youHit);
+                }
+            }
+            
+            if (youHit >= (dragonHP / 2)){
+                document.write("Well done" + "<br>");        
+            }else {
+                document.write("You need to keep hitting..." + "<br>");    
+            }
+            break;
+            
+        case 'run':
+            document.write("You decided to run, so you're safe..." + "<br>");
+            var firstTry = Math.floor(Math.random() * 2);
+            var secondTry = Math.floor(Math.random() * 2);
+            
+            if (firstTry === 1 && secondTry === 0) {
+                document.write("You've failed to run and the dragon killed you..." + "<br>");    
+            }else if (firstTry === 1 && secondTry === 1) {
+                document.write("You're outrun the dragon!" + "<br>");    
+            }else {
+                document.write("You're still looking to run" + "<br>");    
+            }
+            break;
+            
+        case 'wait':
+            var holdOnToTheFirstBackup = Math.floor(Math.random() * 2);
+            var holdOnToTheSecondBackup = Math.floor(Math.random() * 2);
+            
+            document.write("You decided to wait for other players" + "<br>");
+            
+            if (holdOnToTheFirstBackup === 1 && holdOnToTheSecondBackup === 0 || holdOnToTheFirstBackup === 0 && holdOnToTheSecondBackup === 1) {
+                document.write("Backup failed..." + "<br>")   ;
+            }else if (holdOnToTheFirstBackup === 1 && holdOnToTheSecondBackup === 1) {
+                document.write("Backup arrived!!!" + "<br>");   
+            }else {
+                document.write("The wait continues..." + "<br>");   
+            }
+            break;
+            
+        default:
+            document.write("You need to make a move...");
+    }
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cat Photo App</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="AppKitty%200.1.css">
+	<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+	
+</head>
+<body>
+	
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-8">
+			<h2 class="text-primary text-center">CatPhotoApp</h2>
+		</div>
+		<div class="col-xs-4">
+			<a href="#">
+			<img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat">
+			</a>
+		</div>
+	</div>
+	
+	<!--
+	<p> Click here for 
+		<a href="#">Cat Photos</a>
+	</p>
+	-->
+		
+	<img class="img-responsive" src="http://bit.ly/fcc-running-cats">
+		
+	<div class="row">
+		<div class="col-xs-4">
+			<button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up">Like</i></button>
+		</div>
+		<div class="col-xs-4">
+			<button class="btn btn-block btn-info"><i class="fa fa-info-circle">Info</i></button>
+		</div>
+		<div class="col-xs-4">
+			<button class="btn btn-block btn-danger"><i class="fa-fa-trash">Delete</i></button>
+		</div>
+	</div>
+	
+	<p>Things cats <span class="text-danger">love:</span></p>
+		
+		<ul>
+			<li>Cat nip</li>
+			<li>Laser pointers</li>
+			<li>Lasagna</li>
+		</ul>
+		<p>Top 3 things cats hate: </p>
+		<ol>
+			<li>Flea treatment</li>
+			<li>Thunder</li>
+			<li>Other Cats</li>
+		</ol>
+	
+	
+	
+		<form action="/submit-cat-photo">
+			<div class="row">
+				<div class="col-xs-6">
+					<label><input type="radio" name="indoor-outdoor">Indoor</label>
+				</div>
+				<div class="col-xs-6">
+					<label><input type="radio" name="indoor-outdoor">Outdoor</label>	
+				</div>
+			</div>
+		
+			<label>
+				<input type="checkbox" name="personality">Loving
+			</label>
+			<label>
+				<input type="checkbox" name="personality">Lazy
+			</label>
+			<label>
+				<input type="checkbox" name="personality">Crazy
+			</label>
+			<input type=text placeholder="cat photo url">
+			<button type="submit">Submit</button>
+		</form>
+	
+	</div>
+	
+	
+	
+	<!--
+	IPSUM	
+	<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, 
+		hairball run catnip eat the grass sniff.</p>
+	<p class="red-text">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur 
+		catnip scratched.</p>
+	-->
+
+</body>
+</html>

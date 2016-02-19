@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>isEven app</title>
+</head>
+<body>
+<script type="application/javascript">
+
+    var isEven = function(number){
+        if (number % 2 === 0){
+            return true;    
+        }else if(isNaN(number)){
+            return "It's not a number";    
+        }else {
+            return false;   
+        }
+    }
+    
+    document.write(isEven("n"));
+    
+    
+    
+</script>    
+</body>
+</html>

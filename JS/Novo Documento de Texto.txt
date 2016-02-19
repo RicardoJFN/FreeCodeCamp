@@ -1,0 +1,15 @@
+function where(collection, source) {
+  var arr = [];
+  var sourceKeys = Object.keys(source);
+  for(var i=0; i<collection.length; i++){
+    for(var j=0; j<sourceKeys.length; j++){
+      if(collection[i].hasOwnProperty(sourceKeys[j]) &&
+         collection[i][sourceKeys[j]] === source[sourceKeys[j]]){
+              arr.push(collection[i]);
+      }       
+    } 
+  }
+  return arr;
+}
+
+works, but not readable

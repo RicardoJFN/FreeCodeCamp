@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+
+	<head>
+		<title>Palindrome words</title>
+	</head>
+	
+	<body>
+		
+		<script>
+		
+			
+			function palindrome(str){
+				
+				var strNormal = str.replace(/[\W_]/g, '').toLowerCase();
+				var strReverse = strNormal.split('').reverse().join('');
+				
+				return strNormal === strReverse;
+			}
+			
+			
+			var respostaUtilizador = prompt("Introduza a palavra para verificar se é um 'Palindrome'");
+			
+			document.write(palindrome(respostaUtilizador));
+		
+		
+		</script>
+	
+	</body>
+	
+</html>

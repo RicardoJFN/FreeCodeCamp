@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Dragon Slayer Game</title>
+</head>
+<body>
+<script type="text/javascript">
+    
+    var slaying = true;
+    var youHit = Math.floor(Math.random() * 2);
+    var damageThisRound = Math.floor(Math.random() * 5 + 1);
+    var totalDamage = totalDamage + damageThisRound;
+    
+    while (slaying){
+        slaying = false;
+        
+        if (youHit === 1){
+            document.write("Sucess, you've hit the dragon!" + "<br>");
+            if (totalDamage >= 4){
+                document.write("Congrats, you slew the dragon!" + "<br>");
+                slaying = false;
+            }else {
+                youHit = Math.floor(Math.random() * 2);    
+            }
+        }else {
+            document.write("You've failed to hit");    
+        }
+    }
+    
+    
+    
+    
+    
+    
+</script>    
+</body>
+</html>

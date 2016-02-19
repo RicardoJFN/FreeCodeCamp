@@ -1,0 +1,23 @@
+.jumbotron {
+	background-color: #43DDE5;
+}
+
+#ImagemCentral {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#Info {
+	width: 25%;
+	display: block;;
+	margin: 0 auto;
+}
+
+#body {
+	background-color: #43E56A;
+}
+
+.Intro {
+	font-family: "Comic Sans MS"; 
+}

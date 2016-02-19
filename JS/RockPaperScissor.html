@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    
+    document.write("Let's start." + "<br>");
+    var userChoice = prompt("Do you choose rock, paper or scissors?");
+    
+    //Criação da escolha do computador, através do Math.random()
+    var computerChoice = Math.random();
+    
+    //Atribuição/alteração da variável consoante o rng (random number generator)
+    if (computerChoice >= 0 && computerChoice <= 0.33){
+        computerChoice = "rock";    
+    }else if (computerChoice >= 0.34 && computerChoice <= 0.66) {
+        computerChoice = "paper";
+        }else {
+            computerChoice = "scissors";    
+            }
+    
+    document.write(computerChoice + "<br>"); 
+    
+    var compare = function (firstChoice, secondChoice) {
+        if (firstChoice === secondChoice) {
+            return "The result is a tie"   
+        }else if (firstChoice === "rock"){
+            if (secondChoice === "paper"){
+                return "rock wins";    
+            }else {
+                return "paper wins";    
+            }
+        }else if (firstChoice === "paper"){
+            if (secondChoice === "rock"){
+                return "paper wins";    
+            }else {
+                return "scissors wins";    
+            }
+        }else if (firstChoice === "scissors") {
+            if (secondChoice === "paper") {
+                return "scissors wins";    
+            }else {
+                return "rock wins";
+            }
+        }
+    }
+    
+    document.write(compare(computerChoice, userChoice));
+    
+
+</script>    
+</body>    
+</html>    

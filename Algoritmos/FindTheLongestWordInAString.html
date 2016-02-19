@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Verifica a maior palavra numa string!</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+
+	<body>
+		
+		
+		<div class="jumbotron">
+			<h2>Maior palavra numa string!</h2>
+			<p>Introduza a palavra na caixa de texto</p>
+			<form>
+				<input type="text" name="texto" value="Insira a palavra" id="texto"/>
+				<span id="spn"></span>
+				<br><br>
+				<input type="button" name="botao" value="Ok" onclick="show()"/>
+				<br><br>
+				<input type="text2" name="texto2" value="Resultado" id="texto2"/>
+			</form>
+		</div>
+	
+		
+		<script>
+			
+			function longWord(str){
+				var wordSplit = str.split(' '), palavraMaior = 0, i;
+				
+				for(i = 0; i < wordSplit.length; i++){
+					if(wordSplit[i].length > palavraMaior){
+						palavraMaior = wordSplit[i].length;
+					}
+					
+					
+				}
+				
+				
+				return palavraMaior;
+			}
+			
+			
+			function show(){
+				
+				
+				document.getElementById('texto2').value = longWord(document.getElementById('texto').value);
+				
+			}
+			
+		
+		</script>
+		
+	
+	</body>
+
+</html>

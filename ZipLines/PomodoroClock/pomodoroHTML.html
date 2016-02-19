@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Relogio pomodoro</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="pomodoroCSS.css">
+	</head>
+
+	<body>
+	
+		<div class="jumbotron" id="titulo">
+			<h2 id="pomodoro">Pomodoro Clock!</h2>
+		</div>
+	
+		<img src="http://pomodorotechnique.com/wp-content/themes/pomodoro/img/products/pomo-timer.png" id="pomodoroImage"/>
+		
+		<br>
+		
+		<form>
+			<input type="button" id="botaoTeste" value="Teste">
+		</form>
+		
+		<br><br>
+		
+		<input type="text" id="contagem">
+
+		
+		<script>
+		
+			$(document).ready(function(){
+				
+				$("#botaoTeste").on("click", function(){
+					var $button = $(this);
+					var oldValue = $button.parent().find("contagem").val();
+					
+					if($button.text() == "+"){
+						var newVal = parseFloat(oldValue) + 1;
+					}else {
+						if (oldValue > 0){
+							var newVal = parseFloat(oldValue) - 1;
+						}else {
+							newVal = 0;
+						}
+					}
+					
+					$button.parent().find("contagem").val(newVal);
+				})
+				
+			})
+		
+		</script>
+		
+	</body>
+</html>

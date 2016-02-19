@@ -1,0 +1,59 @@
+<!DOCTYPE>
+<html>
+
+	<head>
+		<title>Return the largest number in arrays!</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+
+	<body>
+	
+		<div class="jumbotron">
+			<h2>Verifique o maior número do array!</h2>
+			<form>
+				<!--<input type="button" name="botaoInserir" id="insert" value="Inserir valor" onClick="#"/> -->
+				
+				<p id="valores">[[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]</p>
+				<label
+				<br><br>
+				<p>Carrega no botao para verificar o maior numero do array!</p>
+				<input type="button" name="verificaMaior" id="verifica" value="Verfica" onclick="show()"/>
+				<input type="text" name="txtVerifica" id="txtVerifica"/>
+			</form>
+		</div>
+		
+		
+		<script>
+		
+			function largestNumber(nArrays){
+				
+				
+				function valorAltoEValorBaixo(a,b){
+					return b - a;
+				}
+				
+				
+				for(var i = 0; i < nArrays.length; i++){
+					nArrays[i] = nArrays[i].sort(valorAltoEValorBaixo);
+					nArrays[i] = nArrays[i].splice(0,1);
+				}
+				
+				nArrays = nArrays.reduce(function (a,b){
+					return a.concat(b);
+				});
+				
+				return nArrays;
+			}
+			
+			function show(){
+				document.getElementById('txtVerifica').value = largestNumber([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+			}
+		
+		
+		
+		</script>
+		
+	
+	</body>
+
+</html>

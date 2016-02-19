@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    
+    var text = "Hey, my name is Ricardo, and Ricardo . \ Ricardo.";
+    var myName = "Ricardo";
+    var hits = [];
+    
+    for (var i = 0; i < text.length; i++){
+        if (text[i] === 'R'){
+            for (var j = 0; j < i + myName.length; j++){
+                hits.push('R');    
+            }
+        }
+    }
+    
+    if (hits === 0){
+        document.write("Your name wasn't found");    
+    }else {
+        document.write(hits);                   
+    }
+    
+    
+</script>
+</body>
+</html>    

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact List</title>
+</head>
+<body>
+<script type="text/javascript">
+    
+    var friends = new Object();
+    friends.bill = new Object();
+    friends.steve = new Object();
+    
+    friends.bill.firstName = 'Bill';
+    friends.bill.secondName = 'Gates';
+    friends.bill.phoneNumber = 9956464611;
+    friends.bill.adresss = "Microsoft Avenue";
+    
+    friends.steve.firstName = 'Steve';
+    friends.steve.secondName = 'Jobs';
+    friends.steve.phoneNumber = 3331949455;
+    friends.steve.adresss = "Apple Avenue";
+    
+    var list = function(listContact) {
+        for (var bill in listContact) {
+            document.write(bill);    
+        }
+    }
+    
+    var search = function(name){
+        for (var i in friends) {
+            if (friends[i].firstName === name){
+                document.write(friends[i]);
+                return friends[i];
+            }
+        }
+    }
+    
+    document.write(search(bill));
+    
+    
+</script>        
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fatoriza :D!</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+	
+	<body>
+		
+		<div class="jumbotron">
+			<h2>Fatorial de um numero :D</h2>
+			<p>Introduza o valor na caixa de texto</p>
+			<form>
+				<input type="text" name="texto" id="texto"/>
+				<span id="spn"></span>
+				<br><br>
+				<input type="button" name="fatoriza" value="Fatoriza" onclick="show()"/>
+				<br><br>
+				<input type="text2" name="texto2" id="texto2"/>
+			</form>
+		</div>
+	
+		<script>
+		
+			function fatorial(numero){
+				if(numero === 0){
+					return 1;
+				}else{
+					return numero * fatorial(numero - 1);
+				}
+			}
+			
+			function show(){
+				document.getElementById('texto2').value = fatorial(document.getElementById('texto').value);
+			}
+			
+			
+		</script>
+		
+	
+	</body>
+</html>

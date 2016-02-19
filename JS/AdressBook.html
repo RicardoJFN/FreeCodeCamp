@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       
+    <title>Adress Book</title>
+</head>
+<body>
+<script type="text/javascript">
+    
+    var pessoa = function (){
+        
+    }
+    
+    
+    var person = function (firstName, lastName, phoneNumber, email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+    
+    var bob = new person('Bob', 'Jones', 22315188, 'bobj@gmail.com');
+    var mary = new person('Mary', 'Johnson', 55516897, 'maryj@gmail.com');
+    
+    var contacts = [bob, mary];
+    
+    function printPerson(objPerson) {
+        return objPerson.firstName + " " + objPerson.lastName;    
+    }
+    
+    function listPerson(){
+        for (var i = 0; i < contacts.length; i++){
+            document.write(contacts[i].firstName + "<br>"); 
+        }
+    }
+    
+    function search(lastName) {
+        for (var i = 0; i < contacts.length; i++){
+            if (contacts[i].lastName === lastName){
+                document.write(contacts[i].firstName + " " + contacts[i].lastName);   
+            }
+        }
+    }
+    
+    function addPerson(firstName, lastName, phoneNumber, email) {
+       contacts[contacts.length] = {
+            person(firstName, lastName, phoneNumber, email);
+       }
+    }
+    
+    //addPerson('Ricardo', 'Nunes', 55566666, 'teste@gmail.com');
+    
+    listPerson();
+    
+</script>        
+</body>
+</html>

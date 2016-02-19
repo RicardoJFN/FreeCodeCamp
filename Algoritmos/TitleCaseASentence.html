@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Title Case a Sentence</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+	
+	<body>
+	
+		<div class="jumbotron">
+			<h2>Insira a palavra para que se possa meter em letra grande a primeira letra</h2>
+			<form>
+				<input type="text" name="textoInser" id="textoInser"/>
+				<br><br>
+				<input type="button" id="transf" value="Transforma a palavra" onclick="show()"/>
+				<br><br>
+				<input type="text" name="textoTransf" id="textoTransf"/>
+			</form>
+		</div>
+		
+		<script>
+		
+			//Tem que devolver a primeira letra da palavra em caps lock
+			function titleCaseSentence(str){
+				return str.replace(/\w\S*/g, function(txt){
+          			return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      			});
+			}
+		
+			function show(){
+				document.getElementById('textoTransf').value = titleCaseSentence(document.getElementById('textoInser').value);
+			}
+			
+		</script>
+		
+	
+	</body>
+	
+
+</html>

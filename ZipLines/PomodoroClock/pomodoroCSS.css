@@ -1,0 +1,26 @@
+body{background-color: #780000;}
+
+#titulo{background-color: #C00000;}
+
+#pomodoro{
+	font-family: Comic Sans MS;
+	color:floralwhite;
+	text-align: center;
+}
+
+#pomodoroImage{
+	display: block;
+	margin: auto;
+	border: 3px dashed;
+	padding: 10px;
+}
+
+#botaoTeste{
+	height: 70px;
+	width: 70px;
+	border-radius: 70px;
+	display: block;
+	margin: auto;
+	padding: 10px;
+}
+
