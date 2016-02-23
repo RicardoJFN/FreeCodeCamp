@@ -1,0 +1,40 @@
+#entrada{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+#well{
+    height: 350px;
+    width: 350px;
+    margin: 0 auto;
+}
+
+#about_me{
+    display: inline-block;
+    position: relative;
+    left: -150px;
+    bottom: -110px;
+}
+
+#projects{
+    display: inline-block;
+    position: relative;
+    right: -300px;
+    bottom: -110px;
+}
+
+#first_line{
+    display: inline-block;
+    position: relative;
+    right: -1200px;
+    bottom: -50px;
+    border-style: solid;
+    border-color: slategrey;
+}
