@@ -26,49 +26,36 @@
 function rot13(str){
 
 
-    var firstArray = [32, 33, 34, 35, 36 ,37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47];
+    //Array's que contêm os charCode's necessários para a verificação;
+    var firstArray = [32, 33, 34, 35, 36 ,37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 63];
     var secondArray = [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77];
     var thirdArray = [78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90];
 
 
     var decipher = "";
 
-
-    //Verificar se a letra pertence ao array se sim então trocar a letra por outro array
-
+    //Verifica a string que lhe é passada
     for(var i = 0; i < str.length; i++){
-        for (var j = 0; j < firstArray.length; j++){
-            if (str.charCodeAt(i) === firstArray[j]){
-                //console.log("Pertence ao primeiro array");
-                decipher += String.fromCharCode(firstArray[j]);
-            }
-
-        }
-        for (var k = 0; k < secondArray.length; k++){
-            if(str.charCodeAt(i) === secondArray[k]){
-                //console.log("Pertence ao segundo array");
-                decipher += String.fromCharCode(thirdArray[k]);
+        for (var j = 0; j < firstArray.length; j++){ //Verifica o primeiro array
+            if (str.charCodeAt(i) === firstArray[j]){ //Testa a condição
+                decipher += String.fromCharCode(firstArray[j]); // Se sim então a variável decipher ganha esse valor que é transformado para letra;
             }
         }
-        for (var y = 0; y < thirdArray.length; y++){
-            if(str.charCodeAt(i) === thirdArray[y]){
-                //console.log("Pertence ao terceiro array");
 
-                    decipher += String.fromCharCode(secondArray[y]);
+        for (var k = 0; k < secondArray.length; k++){ //Verifica o segundo array
+            if(str.charCodeAt(i) === secondArray[k]){ //Teste a condição
+                decipher += String.fromCharCode(thirdArray[k]); //Se sim então a variável decipher ganha esse valor que é transformado para letra;
+            }
+        }
 
+        for (var y = 0; y < thirdArray.length; y++){ //Verifica o terceiro array
+            if(str.charCodeAt(i) === thirdArray[y]){ //Teste a condição
+                    decipher += String.fromCharCode(secondArray[y]); //Se sim então a variável decipher ganha esse valor que é transformado para letra;
             }
         }
     }
 
-
-
-
     return decipher;
-
-
-    //A cifra troca sempre a posição independenmtente da letra que é por exemplo se for N então é igual a A se for A então é igual a N
-
-
 }
 
 console.log(rot13("SERR PBQR PNZC"));
