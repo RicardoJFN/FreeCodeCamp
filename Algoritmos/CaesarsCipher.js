@@ -103,6 +103,6 @@ function rot13(str){
 }
 
 console.log(rot13("SRR VN"));
-//console.log(rot13("SERR CVMMN!"));
+console.log(rot13("SERR CVMMN!"));
 //console.log(rot13("SERR YBIR?"));
 //console.log(rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK."));
