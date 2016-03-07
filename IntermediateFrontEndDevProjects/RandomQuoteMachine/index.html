@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Random Quote Machine</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="application/javascript" src="script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
+
+
+
+    <div class="jumbotron">
+       <p id="title">Random Quote Machine</p>
+    </div>
+
+    <div class="well">
+        <label id="label">Press the button to generate a random quote..</label>
+        <button type="button" class="btn btn-primary" id="generator" onclick="generateQuote()">Generate a random quote!</button>
+    </div>
+
+
+    <footer>
+        Produced by: Ricardo Nunes
+    </footer>
 
 </body>
 </html>

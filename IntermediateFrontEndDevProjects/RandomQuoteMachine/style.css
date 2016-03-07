@@ -1,0 +1,40 @@
+#title{
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    color: #FFD700;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.jumbotron{
+    background-color: darkturquoise;
+}
+
+footer{
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.well{
+    height: 300px;
+    width: 600px;
+    margin:0 auto;
+}
+
+#generator{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 35%;
+}
+
+#label{
+    display: block;
+    margin:0 auto;;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+}
