@@ -1,0 +1,120 @@
+body{
+    background-color: dimgray;
+}
+
+
+#header{
+    height: 100px;
+}
+
+#title{
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#temp_show{
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    font-family: 'PT Serif', serif;
+    font-weight: bold;
+    font-size:15px;
+    text-align: center;
+}
+
+
+#hexagon {
+     position: relative;
+     width: 230px;
+     height: 132.79px;
+     background-color: #64C7CC;
+     margin: 66.40px auto;
+
+ }
+
+#hexagon:before,
+#hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 115px solid transparent;
+    border-right: 115px solid transparent;
+}
+
+#container{
+    top:250px;
+}
+
+#hexagon:before {
+    bottom: 100%;
+    border-bottom: 66.40px solid #64C7CC;
+}
+
+#hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 66.40px solid #64C7CC;
+}
+
+#teste {
+    position: relative;
+    width: 230px;
+    height: 132.79px;
+    background-color: #64C7CC;
+    margin: 66.40px auto;
+
+
+}
+
+#teste:before,
+#teste:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 115px solid transparent;
+    border-right: 115px solid transparent;
+}
+
+#teste:before {
+    bottom: 100%;
+    border-bottom: 66.40px solid #64C7CC;
+}
+
+#teste:after {
+    top: 100%;
+    width: 0;
+    border-top: 66.40px solid #64C7CC;
+}
+
+#first_image{
+    height:250px;
+    width: 250px;
+    background-color: aquamarine;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+p{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 800;
+    font-size:35px;
+    top: 190px;
+}
+
+#main{
+    background-color: #1ab1ed;
+    height: 250px;
+    width: 450px;
+    margin: 0 auto;
+}
+
+#pic{
+    background-color: #1ab1ed;
+    height:50px;
+    width: 50px;
+    margin: 0 auto;
+}
