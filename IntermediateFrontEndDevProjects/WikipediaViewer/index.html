@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="application/json" src="script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
+
+    <div id="indication" >
+        <p>Type what you want to search!</p>
+    </div>
+    <br>
+    <form>
+        <input type="text" id="text_area">
+        <input type="button" value="Search" id="submit" onclick="getSearchedItem()"></input>
+    </form>
+    <br>
+    <div class="well" id="main_info">
+        <p id="teste"></p>
+    </div>
+
+
+
 
 </body>
 </html>
