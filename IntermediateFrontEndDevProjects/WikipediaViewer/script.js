@@ -4,22 +4,33 @@
 function getSearchedItem(){
 
     var searchedItem = document.getElementById("text_area").value;
-    //$("#teste").html(searchedItem);
+    var newDiv;
+    var divIdName;
+    var br;
 
-    $.getJSON("http://en.wikipedia.org/w/api.php?callback=?&action=query&titles="+searchedItem+"&generator=links&prop=categories",function(json){
-    //$.getJSON("https://en.wikipedia.org/w/api.php?callback=?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json&titles="+searchedItem,function(json){
-        $.ajaxSetup({dataType: json});
-        for(var pageId in json.query.pages){
-            if(json.query.pages.hasOwnProperty(pageId)){
-                $("#main_info").html("<p>"+ JSON.stringify(json.query.pages[pageId]) +"</p>");
+    $.getJSON('https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&generator=search&gsrsearch='+searchedItem+'&callback=?', function(data){
+        
+        var page = data.query.pages
+            for(var i in page){
+                newDiv = document.createElement('a');
+                newDiv.setAttribute('id',divIdName);
+                newDiv.innerHTML = page[i].title;
+                br = document.createElement("br");
+                document.body.appendChild(newDiv);
+                document.body.appendChild(br);
+                //"\n" + page[i].extract
             }
-        }
-
-    });
-
-//ver wikiTExt no json
-
+        
+      
+    })
+    
+   
 }
+
+function getRandomItem(){
+    window.open("https://en.wikipedia.org/wiki/Special:Random");
+}
+
 
 
 
