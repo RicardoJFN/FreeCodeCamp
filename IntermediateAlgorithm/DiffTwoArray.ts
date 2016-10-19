@@ -1,5 +1,5 @@
 function diffArray(arr1: string[], arr2: string[]){
-    let newArr: string[];
+    let newArr: string[] = [];
     let maxArr: number;
 
     //Defining the max array
@@ -8,15 +8,27 @@ function diffArray(arr1: string[], arr2: string[]){
     }else{
         maxArr = arr2.length;
     }
-
+    
+    
+    for(let i: number = 0; i != maxArr; i++){
+        for(let j: number = 0; j != i; j++){
+            for(let k: number = 0; k != i; k++){
+                if(arr1[j] != arr2[k]){
+                    newArr.push(arr1[j]);
+                    //newArr.push(arr2[k]);
+                }
+            }
+        }
+    }
     
 
-
-
-
+    
+    
     return newArr;
 }
 
+
+console.log("The new array is: " + diffArray(["teste1", "teste2","ola2"], ["ola", "teste1", "ola3"]));
 /**
  * Compare two arrays and return a new array with any items 
  * only found in one of the two given arrays, but not both. 
