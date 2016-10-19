@@ -1,0 +1,25 @@
+#tviewer{
+    font-family: 'Dancing Script', cursive;
+    font-size: 55px;
+    text-align: center;
+}
+
+p{
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+a{
+    font-family: 'Montserrat', cursive;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    color: white;
+}
+
+body{
+    background-color: mediumpurple;
+}
