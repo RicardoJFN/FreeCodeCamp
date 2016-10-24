@@ -2,6 +2,10 @@ function diffArray(arr1: string[], arr2: string[]){
     let newArr: string[] = [];
     let maxArr: number;
 
+
+    newArr = arr1.slice(2);
+
+    /*
     //Defining the max array
     if(arr1.length >= arr2.length){
         maxArr = arr1.length;
@@ -22,7 +26,7 @@ function diffArray(arr1: string[], arr2: string[]){
     }
     
 
-    
+    */
     
     return newArr;
 }
