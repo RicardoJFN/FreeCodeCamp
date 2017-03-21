@@ -1,34 +1,13 @@
 function diffArray(arr1: string[], arr2: string[]){
+    let arrMerge: string[] = [];
     let newArr: string[] = [];
-    let maxArr: number;
-
-
-    newArr = arr1.slice(2);
-
-    /*
-    //Defining the max array
-    if(arr1.length >= arr2.length){
-        maxArr = arr1.length;
-    }else{
-        maxArr = arr2.length;
-    }
     
+    //Merge the arrays
+    arrMerge = arr1.concat(arr2);
     
-    for(let i: number = 0; i != maxArr; i++){
-        for(let j: number = 0; j != i; j++){
-            for(let k: number = 0; k != i; k++){
-                if(arr1[j] != arr2[k]){
-                    newArr.push(arr1[j]);
-                    //newArr.push(arr2[k]);
-                }
-            }
-        }
-    }
+    //Use the filter (Continue from here!!)
     
-
-    */
-    
-    return newArr;
+    return arrMerge;
 }
 
 
